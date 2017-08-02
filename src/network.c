@@ -363,6 +363,7 @@ int resize_network(network *net, int w, int h)
         net->layers[i] = l;
         w = l.out_w;
         h = l.out_h;
+        printf("resize -> %d x %d \n", w, h);
         if(l.type == AVGPOOL) break;
     }
     layer out = get_network_output_layer(*net);

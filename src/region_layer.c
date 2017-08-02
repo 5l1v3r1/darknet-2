@@ -57,6 +57,8 @@ void resize_region_layer(layer *l, int w, int h)
 {
     l->w = w;
     l->h = h;
+    l->out_w = l->w;
+    l->out_h = l->h;
 
     l->outputs = h*w*l->n*(l->classes + l->coords + 1);
     l->inputs = l->outputs;
